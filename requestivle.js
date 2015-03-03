@@ -180,6 +180,8 @@ function sendRequest(method, url, headers, next){
         });
     }
 
+    //TODO: add support for PUT, DELETE, UPDATE request methods.
+
 }
 
 function compileHB(template, context, next){
