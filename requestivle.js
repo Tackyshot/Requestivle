@@ -14,9 +14,9 @@ requestivle.accessResource = function(template, action, context, next){
 
     parseTemplate(template, action, function(url, object){
 
-        return compileHB({item:url}, context, function(err, compURL){
+        return compileHB(url, context, function(err, compURL){
 
-            return compileHB({item:JSON.stringify(object)}, context, function(err, compObj){
+            return compileHB(JSON.stringify(object), context, function(err, compObj){
 
                 return sendRequest(template.action[action].method, compURL, JSON.parse(compObj), function(err, response, body){
 
@@ -182,22 +182,12 @@ function sendRequest(method, url, headers, next){
 
 }
 
-function compileHB(file, context, next){
+function compileHB(template, context, next){
 
-    var template, //the template object pulled by fs
-        compiled, //the object to return as a string.
+    var compiled, //the object to return as a string.
         err = null;
 
-    if ((typeof file === "string")) {
-
-        template = handlebars.compile(fs.readFileSync(route + file).toString());
-
-    }
-    else if((typeof file == 'object') && (file !== null)){
-
-        template = handlebars.compile(file.item);
-    }
-
+    template = handlebars.compile(template);
     compiled = template(context);
 
     return next(err, compiled);
