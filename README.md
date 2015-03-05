@@ -1,6 +1,9 @@
 # Requestivle — A simple request wrapper and variable compiler for making HTTP(s) based API calls.
 [![NPM](https://nodei.co/npm/requestivle.png)](https://nodei.co/npm/requestivle/)
 
+##Notice:
+we accidentally published two versions of Requestivle, the other has shut down. If you are here from `'restivle'` you ARE in the correct spot.
+
 ## Overview
 
 Requestivle is designed to help standardize your API calls no matter what type of API your destination is using. Whether its a RESTful service or an old school php system, Requestivle will build your request and return the response of your query.
