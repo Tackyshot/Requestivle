@@ -76,7 +76,7 @@ Requestivle requires an API specific form template to be entered. Because every 
             ],
             "head":
             {
-                some_header:{{header_value}}
+                "some_header":"{{header_value}}"
             }
         }
     }

@@ -99,7 +99,7 @@ function mergeStrings(template, action){
 
     }
 
-    if(actURL !== null) {
+    if((typeof actURL !== 'undefined') && (actURL !== null)) {
         for (var j = 0; j <= actURL.length; j++) {
 
             if(typeof actURL[j] !== 'undefined') {
@@ -109,7 +109,7 @@ function mergeStrings(template, action){
         }
     }
 
-    if(baseParams !== null) {
+    if((typeof baseParams !== 'undefined') && (baseParams !== null)) {
         //reset counter.
         counter = 0;
 
@@ -132,7 +132,7 @@ function mergeStrings(template, action){
     }
 
 
-    if(urlParams !== null) {
+    if((typeof urlParams !== 'undefined') && (urlParams !== null)) {
         //reset counter.
         counter = 0;
 
@@ -164,17 +164,22 @@ function mergeStrings(template, action){
 
 
 function sendRequest(method, url, headers, next){
+    var body;
 
     if(method === "post"){
-        request.post(url, headers, function(err, response, body){
+        request.post(url, headers, function(err, response){
 
+            body = JSON.parse(response.body);
+            //delete response.body;
             return next(err, response, body);
 
         });
     }
     if(method === "get"){
-        request.get(url, headers, function(err, response, body){
+        request.get(url, headers, function(err, response){
 
+            body = JSON.parse(response.body);
+            //delete response.body;
             return next(err, response, body);
 
         });

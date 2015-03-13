@@ -1,6 +1,6 @@
 {
   "name": "requestivle",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "description": "A simple request wrapper and variable compiler for making HTTP(s) based API calls.",
   "main": "requestivle.js",
   "scripts": {
@@ -15,7 +15,9 @@
     "api-request",
     "requestivle",
     "REST",
-    "api request"
+    "api request",
+    "api",
+    "restivle"
   ],
   "author": "Dillon Osman",
   "contributors" :[
