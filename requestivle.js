@@ -136,7 +136,7 @@ function mergeStrings(template, action){
         //reset counter.
         counter = 0;
 
-        for (var l = 0; l = urlParams.length; l++) {
+        for (var l = 0; l <= urlParams.length; l++) {
 
             if(typeof urlParams[l] !== 'undefined') {
 
