@@ -117,7 +117,7 @@ function mergeStrings(template, action){
 
             if(typeof baseParams[k] !== 'undefined') {
 
-                if(counter === 0){
+                if(counter === 0 || counter === 1){
                     delim = "";
                     counter ++;
                 }
@@ -140,7 +140,7 @@ function mergeStrings(template, action){
 
             if(typeof urlParams[l] !== 'undefined') {
 
-                if(counter === 0){
+                if(counter === 0 || counter === 1){
                     delim = "";
                     counter ++;
                 }
