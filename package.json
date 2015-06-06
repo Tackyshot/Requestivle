@@ -20,14 +20,14 @@
     "restivle"
   ],
   "author": "Dillon Osman",
-  "contributors" :[
+  "contributors": [
     {
       "name": "Sean Pichardo",
       "email": "sean.pichardo@gmail.com"
     }
   ],
   "license": "MIT",
-  "readmeFilename":"README.md",
+  "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/Tackyshot/requestivle/issues"
   },
@@ -35,5 +35,10 @@
   "dependencies": {
     "handlebars": "^3.0.0",
     "request": "^2.53.0"
+  },
+  "devDependencies": {
+    "code": "^1.4.0",
+    "hapi": "^8.5.3",
+    "lab": "^5.9.0"
   }
 }
